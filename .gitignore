@@ -1,5 +1,21 @@
-# Laravel
-# ---------
+### Laravel ###
+# -----------
 /vendor
 /node_modules
 .env
+
+### NetBeans ###
+# ------------
+nbproject/
+
+### Windows ###
+# -----------
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.msp
+*.lnk
