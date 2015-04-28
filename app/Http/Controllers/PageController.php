@@ -13,7 +13,7 @@ class PageController extends Controller {
 	}
 
 	public function about() {
-		return "Appropo de Culitheque" . php_EOL
+		return "A-propos de Culitheque" . php_EOL
 				. "copyright fzed51 @ 2015" . PHP_EOL
 				. "Catalogue de recette.";
 	}
