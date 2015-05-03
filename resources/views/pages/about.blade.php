@@ -1,5 +1,7 @@
 @extends('default')
 
+<?php $titre = "A-propos"; ?>
+
 @section('content')
 <div class="about">
 	<div class="row">
