@@ -17,9 +17,9 @@
 
 	</head>
 
-	<body>
+	<body style="padding-top: 50px" >
 
-		<nav class="navbar navbar-inverse navbar-fixed-top">
+		<nav class="navbar navbar-inverse navbar-fixed-top" >
 			<div class="container">
 				<div class="navbar-header">
 					<a class="navbar-brand" href="{{ route('index') }}">Project name</a>
@@ -32,7 +32,7 @@
 			</div>
 		</nav>
 
-		<div class="container">
+		<div class="container" style="padding: 40px 15px">
 			@yield('content')
 		</div><!-- /.container -->
 		<!-- jQuery -->
