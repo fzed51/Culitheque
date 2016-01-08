@@ -4,8 +4,7 @@
 Options -Indexes
 
 RewriteEngine on
-RewriteBase "/public"
+#RewriteBase "/public"
 
-RewriteCond "$1.php" -f
-RewriteCond "$1.html" !-f
-RewriteRule "^(.*).html$" "$1.php"
+#RewriteCond "/public/${REQUEST_FILENAME}" !-f
+#RewriteRule "(.*).html$" "$1.php"
