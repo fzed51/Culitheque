@@ -1,10 +1,8 @@
-# Apache configuration file (see httpd.apache.org/docs/2.2/mod/quickreference.html)
+RewriteEngine On
 
-# disable directory listing
-Options -Indexes
+RewriteCond %{REQUEST_URI} !^/public
+RewriteCond %{DOCUMENT_ROOT}/public%{REQUEST_URI} -d
+RewriteRule ^(.*?)/?$ /public/$1/ [L]
 
-RewriteEngine on
-#RewriteBase "/public"
-
-#RewriteCond "/public/${REQUEST_FILENAME}" !-f
-#RewriteRule "(.*).html$" "$1.php"
+RewriteCond %{REQUEST_URI} !^/public
+RewriteRule ^(.*)$ /public/$1 [L]
