@@ -1,0 +1,33 @@
+.header {
+    background-image: url('/img/home_header.jpg');
+    background-position-x: center;
+    background-position-y: 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: calc(100vh - 60px);
+}
+
+.header .titre{
+    font-family: arial;
+    font-size: 60px;
+    font-weight: bolder;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    text-align: center;
+}
+
+.header .sous-titre{
+    color:#eee;
+    text-shadow: 1px 1px 1px #000;
+    width: 50%;
+    min-width: 512px;
+    margin: auto;
+}
+
+.filtres .filtre{
+    display: inline-block;
+    margin: auto;
+    font-family: arial;
+    font-size: 20px;
+    line-height: 60px;
+}
