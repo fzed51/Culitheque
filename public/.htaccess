@@ -3,4 +3,7 @@ Options -Indexes
 RewriteEngine On
 
 RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^/?css/(.*) style.php?f=$1 [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^.* index.php [QSA,L]

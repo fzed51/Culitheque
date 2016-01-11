@@ -1,12 +1,12 @@
-## YAML Template.
 ---
 
 title: 'Galette des rois pommes - cannelle'
+layout: recette
 
 t_preparation: 20 min
-t_cuisson:    30 min
-parts:         4 personnes
-illustration: galette_pomme_cannelle.jpg
+t_cuisson:     30 min
+parts:          4 personnes
+illustration:  galette_pomme_cannelle.jpg
 ingredients:
     - 2 rouleaux de pate feuilletée
     - 4 pommes golden moyennes
