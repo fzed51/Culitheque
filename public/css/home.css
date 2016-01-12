@@ -5,6 +5,7 @@
     background-repeat: repeat, no-repeat;
     background-size: auto, cover;
     height: calc(100vh - 60px);
+    min-height: 740px;
 }
 
 .header .header-content {
@@ -24,6 +25,9 @@
 }
 
 .header .sous-titre{
+    font-family: arial;
+    font-size: 20px;
+    text-align: justify;
     color:#eee;
     /*text-shadow: 1px 1px 1px #000;*/
     width: 50%;
@@ -31,16 +35,60 @@
     margin: auto;
 }
 
+.filtres {
+    width: 100%;
+
+    -ms-box-orient: horizontal;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-align-items: stretch;
+    align-items: stretch;
+
+    background-color: #222;
+}
+
 .filtres .filtre{
+
     display: inline-block;
     margin: auto;
     font-family: arial;
     font-size: 20px;
+    color: #ddd;
     line-height: 60px;
+}
+
+.recettes {
+    width: 100%;
+
+    -ms-box-orient: horizontal;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-align-items: stretch;
+    align-items: stretch;
+
 }
 
 .recettes .recette{
     position: relative;
+    margin: 10px;
     width: 300px;
     height: 300px;
     overflow: hidden;
