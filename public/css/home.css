@@ -1,10 +1,16 @@
 .header {
-    background-image: url('/img/home_header.jpg');
+    background-image: url('../img/header_pattern.png'), url('../img/home_header.jpg');
     background-position-x: center;
     background-position-y: 0px;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-repeat: repeat, no-repeat;
+    background-size: auto, cover;
     height: calc(100vh - 60px);
+}
+
+.header .header-content {
+    position: relative;
+    transform: translateY(-50%);
+    top: 50%
 }
 
 .header .titre{
@@ -12,13 +18,14 @@
     font-size: 60px;
     font-weight: bolder;
     color: #fff;
-    text-shadow: 1px 1px 1px #000;
+    /*text-shadow: 1px 1px 1px #000;*/
     text-align: center;
+    padding-bottom: 30px
 }
 
 .header .sous-titre{
     color:#eee;
-    text-shadow: 1px 1px 1px #000;
+    /*text-shadow: 1px 1px 1px #000;*/
     width: 50%;
     min-width: 512px;
     margin: auto;
@@ -30,4 +37,30 @@
     font-family: arial;
     font-size: 20px;
     line-height: 60px;
+}
+
+.recettes .recette{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.recettes .recette img{
+    display: block;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 0px;
+}
+
+.recettes .recette p{
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    line-height: 20px;
+    background-color: #fff;
 }
