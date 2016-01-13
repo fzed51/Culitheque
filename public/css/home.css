@@ -1,3 +1,5 @@
+@import url("fonts/fonts.css");
+
 .header {
     background-image: url('../img/header_pattern.png'), url('../img/home_header.jpg');
     background-position-x: center;
@@ -15,21 +17,19 @@
 }
 
 .header .titre{
-    font-family: arial;
+    font-family: varela;
     font-size: 60px;
     font-weight: bolder;
     color: #fff;
-    /*text-shadow: 1px 1px 1px #000;*/
     text-align: center;
     padding-bottom: 30px
 }
 
 .header .sous-titre{
-    font-family: arial;
+    font-family: varela;
     font-size: 20px;
     text-align: justify;
     color:#eee;
-    /*text-shadow: 1px 1px 1px #000;*/
     width: 50%;
     min-width: 512px;
     margin: auto;
@@ -60,7 +60,7 @@
 
     display: inline-block;
     margin: auto;
-    font-family: arial;
+    font-family: varela;
     font-size: 20px;
     color: #ddd;
     line-height: 60px;
@@ -83,6 +83,11 @@
     flex-flow: row wrap;
     -webkit-align-items: stretch;
     align-items: stretch;
+
+    font-family: architects;
+    font-size: 14px;
+    font-weight: bolder;
+    font-style: italic;
 
 }
 
@@ -109,6 +114,7 @@
     padding: 0px;
     margin: 0px;
     width: 100%;
-    line-height: 20px;
+    line-height: 25px;
     background-color: #fff;
+    opacity: 0.6;
 }
