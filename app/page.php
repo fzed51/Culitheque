@@ -47,6 +47,20 @@ class Page {
         return $this->name;
     }
 
+    function get($property) {
+        if (!array_key_exists($property, $this->data)) {
+            $this->data[$property] = $this->getDocParse()->getConfig()[$property];
+        }
+        return $this->data[$property];
+    }
+
+    function has($property) {
+        if (!array_key_exists($property, $this->data)) {
+            $this->data[$property] = $this->getDocParse()->getConfig()[$property];
+        }
+        return !is_null($this->data[$property]);
+    }
+
     function getContent() {
         if (!$this->content) {
             $parser = new \cebe\markdown\GithubMarkdown();
@@ -58,7 +72,6 @@ class Page {
 
     function render() {
         return $this->renderLayout($this->get('layout'), $this->getContent());
-        $contents;
     }
 
     function addStyle($style) {
@@ -97,13 +110,6 @@ class Page {
             $this->docParsed = Parser::parse(file_get_contents($this->path));
         }
         return $this->docParsed;
-    }
-
-    private function get($property) {
-        if (!array_key_exists($property, $this->data)) {
-            $this->data[$property] = $this->getDocParse()->getConfig()[$property];
-        }
-        return $this->data[$property];
     }
 
 }

@@ -13,23 +13,22 @@
 .header .header-content {
     position: relative;
     transform: translateY(-50%);
-    top: 50%
+    top: 50%;
 }
 
-.header .titre{
-    font-family: varela;
+.header-content .titre{
     font-size: 60px;
     font-weight: bolder;
+    line-height: 60px;
     color: #fff;
     text-align: center;
     padding-bottom: 30px
 }
 
-.header .sous-titre{
-    font-family: varela;
+.header-content .sous-titre{
     font-size: 20px;
     text-align: justify;
-    color:#eee;
+    color:#ddd;
     width: 50%;
     min-width: 512px;
     margin: auto;
@@ -40,11 +39,11 @@
 
     -ms-box-orient: horizontal;
     display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -moz-flex;
+    display:    -moz-box;
+    display:     -ms-flexbox;
+    display:    -moz-flex;
     display: -webkit-flex;
-    display: flex;
+    display:         flex;
 
     -webkit-justify-content: space-around;
     justify-content: space-around;
@@ -60,9 +59,8 @@
 
     display: inline-block;
     margin: auto;
-    font-family: varela;
     font-size: 20px;
-    color: #ddd;
+    color: #eee;
     line-height: 60px;
 }
 

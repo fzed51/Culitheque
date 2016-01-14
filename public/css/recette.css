@@ -1,0 +1,118 @@
+@import url("fonts/fonts.css");
+
+body{
+    background-image: url('/img/recette-background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-position-y: 0px;
+    min-height: 98vh;
+}
+
+.header {
+    position: relative;
+    width: 100%;
+    background-color: #222;
+    color: #ddd;
+}
+
+.header .go-home {
+    color:#fff;
+    font-size: 40px;
+    font-weight: bolder;
+    line-height: 60px;
+    alignment-baseline: middle;
+    vertical-align: middle;
+}
+
+.header .go-home .logo{
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+}
+
+.content{
+    position: relative;
+    display: block;
+    border: 1px solid #eed;
+    box-shadow: 5px 5px 10px rgba(0,0,0,.5);
+    background-color: #eed;
+    margin: auto;
+    width: 512px;
+    min-height: 724px;
+}
+
+.content .recette{
+    font-family: architects;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.recette>*{
+    margin: 0 1em;
+}
+
+.recette h1{
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: underline;
+    text-align: center;
+    padding-bottom: 0.7em;
+    margin-top: 0;
+}
+.recette h2{
+    font-size: 1em;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 0;
+}
+
+.recette dt{
+    display: inline-block;
+}
+.recette dd {
+    display: inline-block;
+    font-weight: bold;
+}
+
+
+.recette .recette-titre{
+    margin-top: 1em;
+}
+
+.recette .recette-infos{
+    font-size: 0.8em;
+    margin-bottom: 1em;
+}
+
+.recette .recette-infos {
+    position: relative;
+    display: block;
+}
+
+.recette .recette-illustration{
+    position: absolute;
+    display: block;
+    width: 225px;
+    min-height: 235px;
+}
+
+.recette-illustration img{
+    border: 1px solid #000;
+    width: 100%;
+    height: auto;
+}
+
+.recette .recette-ingredients{
+    position: relative;
+    display: inline-block;
+    width: 225px;
+    min-height: 235px;
+    padding-right: 0px;
+    margin-right: 0px;
+    left: 50%;
+}
+
+.recette .recette-preparation{
+    margin-bottom: 1em
+}

@@ -3,7 +3,7 @@ $__layout = 'defaut';
 $page->addStyle('<link href="css/home.css" rel="stylesheet" type="text/css">');
 ?>
 <div class="header"><div class="header-content">
-        <div class="titre"><span class="logo"><img src="img/<?= $page->get('logo'); ?>" height="60" width="60" style="color:#fff"/></span><?= $page->get('header_titre'); ?></div>
+        <div class="titre"><span class="logo"><img src="img/logo.png" height="60" width="60" style="color:#fff"/></span>Culithèque</div>
         <div class="sous-titre"><?= $content; ?></div>
     </div></div>
 <div class="content">
