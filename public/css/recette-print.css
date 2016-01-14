@@ -1,7 +1,10 @@
 .header {
     display: none;
 }
+
 .content {
-    box-shadow: none;
+    width: auto;
+    box-shadow: none
+
 }
 

@@ -30,7 +30,11 @@ $page->addStyle('<link href="/css/recette-print.css" rel="stylesheet" type="text
         </div>
         <div class="recette-illustration-ingredients">
             <div class="recette-illustration">
-                <img src="/img/recettes/<?= $page->get('illustration'); ?>" alt = "ilustration de la recette"/>
+                <?php if ($page->has('illustration')): ?>
+                    <img src="/img/recettes/<?= $page->get('illustration'); ?>" alt = "ilustration de la recette"/>
+                <?php else: ?>
+                    <img src="/img/toque-blanche.png" alt = "pas d'ilustration"/>
+                <?php endif ?>
 
             </div>
             <div class = "recette-ingredients">

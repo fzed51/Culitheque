@@ -61,6 +61,14 @@ class Page {
         return !is_null($this->data[$property]);
     }
 
+    function getTags() {
+        echo "1";
+        var_dump($this->path);
+        echo "2";
+        var_dump($this->url);
+        die();
+    }
+
     function getContent() {
         if (!$this->content) {
             $parser = new \cebe\markdown\GithubMarkdown();

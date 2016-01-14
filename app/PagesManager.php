@@ -11,6 +11,10 @@ use RegexIterator;
 class PagesManager implements IteratorAggregate {
 
     private $path;
+
+    /**
+     * @var array[App\Page]
+     */
     private $pages;
 
     function __construct($path) {
@@ -19,11 +23,22 @@ class PagesManager implements IteratorAggregate {
     }
 
     function withTag(array $tags) {
-        $this->pages = array_filter($this->pages, function() use ($tags) {
-            $tags_page = $this->get('tags');
-        });
+        // code ...
+        return $this;
     }
 
+    function getTags() {
+        $tags = [];
+        $this->readPages();
+        foreach ($this->pages as $page) {
+            $tags = array_merge($tags, $page->getTags());
+        }
+        return $tags;
+    }
+
+    /**
+     * @return ArrayIterator
+     */
     function getIterator() {
         $this->readPages();
         return new \ArrayIterator($this->pages);
