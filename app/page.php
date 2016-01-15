@@ -62,11 +62,12 @@ class Page {
     }
 
     function getTags() {
-        echo "1";
-        var_dump($this->path);
-        echo "2";
-        var_dump($this->url);
-        die();
+        $raw_tag = explode('/', $this->getURL());
+        $tafs = [];
+        for($i=0; $i<count($raw_tag)-1; $i++){
+            $tags[strtoupper($raw_tag[$i])] = $raw_tag[$i]; 
+        }                
+        return $tags;
     }
 
     function getContent() {

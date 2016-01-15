@@ -39,11 +39,10 @@ $page->addStyle('<link href="css/home.css" rel="stylesheet" type="text/css">');
             <a href="<?= $recette->getUrl(); ?>">
                 <div class="recette">
                     <?php if ($recette->has('illustration')): ?>
-                        <img src="img/recettes/<?= $recette->get('illustration'); ?>" alt="photo <?= $recette->get('title'); ?>" />
+                        <img src="/img/recettes/<?= $recette->get('illustration'); ?>" alt="photo <?= $recette->get('title'); ?>" />
                     <?php else: ?>
                         <img src="/img/toque-blanche.png" alt = "pas d'ilustration"/>
                     <?php endif ?>
-
                     <p><?= $recette->get('title'); ?></p>
                 </div>
             </a>

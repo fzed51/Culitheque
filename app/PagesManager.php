@@ -33,6 +33,8 @@ class PagesManager implements IteratorAggregate {
         foreach ($this->pages as $page) {
             $tags = array_merge($tags, $page->getTags());
         }
+        // var_dump($tags);
+        // die();
         return $tags;
     }
 
