@@ -2,7 +2,7 @@
 $__layout = 'defaut';
 
 $page->addStyle('<link href="/css/recette.css" rel="stylesheet" type="text/css">');
-$page->addStyle('<link href="/css/recette-print.css" rel="stylesheet" type="text/css" media="print">');
+//$page->addStyle('<link href="/css/recette-print.css" rel="stylesheet" type="text/css" media="print">');
 ?>
 <div class="header">
     <a class="go-home" href="/"><img src="/img/logo.png" class="logo"/>Culithèque</a>

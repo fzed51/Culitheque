@@ -3,12 +3,18 @@ if (!isset($_SESSION['filtre'])) {
     $_SESSION['filtre'] = [];
 }
 if (isset($_GET['f'])) {
-    if ($_GET['f'] !== 'RAZ') {
-        $_SESSION['filtre'][] = strtoupper($_GET['f']);
+    $_SESSION['filtre'][] = strtoupper($_GET['f']);
+}
+if (isset($_GET['af'])) {
+    if ($_GET['af'] !== 'ALL') {
+        if (isset($_SESSION['filtre'][$_GET['af']])) {
+            unset($_SESSION['filtre'][$_GET['af']]);
+        }
     } else {
         $_SESSION['filtre'] = [];
     }
 }
+
 $FILTRE = $_SESSION['filtre'];
 
 $__layout = 'defaut';
@@ -29,10 +35,34 @@ $page->addStyle('<link href="css/home.css" rel="stylesheet" type="text/css">');
     <div class="filtres">
         <?php
         $tags = $recettes->getTags();
+        if (!empty($FILTRE)) {
+            ?>
+            <a class="unfiltre tout" href="/?af=ALL#filtre"> X </a>
+            <?php
+            $tagFiltre = [];
+            foreach ($FILTRE as $idFiltre) {
+                if (isset($tags[$idFiltre])) {
+                    $tagFiltre[$idFiltre] = $tags[$idFiltre];
+                    unset($tags[$idFiltre]);
+                }
+            }
+            foreach ($tagFiltre as $idTag => $tag):
+                ?>
+                <a class="unfiltre" href="/?af=<?= $idTag; ?>#filtre"><?= $tag; ?></a>
+                <?php
+            endforeach;
+        }
+        if (!empty($tags)) {
+            foreach ($tags as $idTag => $tag):
+                ?>
+                <a class="filtre" href="/?f=<?= $idTag; ?>#filtre"><?= $tag; ?></a>
+                <?php
+            endforeach;
+        }
         ?>
-        <div class="filtre">Entée</div>
+        <!--<div class="filtre">Entée</div>
         <div class="filtre">Plat</div>
-        <div class="filtre">Dessert</div>
+        <div class="filtre">Dessert</div>-->
     </div>
     <div class="recettes">
         <?php foreach ($recettes as $recette) : ?>

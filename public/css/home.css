@@ -55,8 +55,7 @@
     background-color: #222;
 }
 
-.filtres .filtre{
-
+.filtres .filtre, .filtres .unfiltre{
     display: inline-block;
     margin: auto;
     font-size: 20px;

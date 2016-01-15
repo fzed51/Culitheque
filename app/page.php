@@ -64,9 +64,9 @@ class Page {
     function getTags() {
         $raw_tag = explode('/', $this->getURL());
         $tafs = [];
-        for($i=0; $i<count($raw_tag)-1; $i++){
-            $tags[strtoupper($raw_tag[$i])] = $raw_tag[$i]; 
-        }                
+        for ($i = 2; $i < count($raw_tag) - 1; $i++) {
+            $tags[strtoupper($raw_tag[$i])] = $raw_tag[$i];
+        }
         return $tags;
     }
 
