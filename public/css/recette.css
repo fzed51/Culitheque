@@ -58,7 +58,7 @@ body{
 .content .recette{
     font-family: architects;
     font-size: 18px;
-    line-height: 22px;
+    line-height: 1.5em;
 }
 
 .recette>*{
@@ -127,7 +127,7 @@ body{
 }
 
 .recette-ingredients li {
-    font-size: 0.8em;
+    /* font-size: 0.8em; */
 }
 
 .recette-ingredients ul li:before {

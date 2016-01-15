@@ -17,13 +17,26 @@ class PagesManager implements IteratorAggregate {
      */
     private $pages;
 
+    /**
+     * @var bool
+     */
+    private $pageReaded;
+
     function __construct($path) {
         $this->path = $path;
         $this->pages = [];
+        $this->pageReaded = false;
     }
 
     function withTag(array $tags) {
-        // code ...
+        $this->readPages();
+        foreach ($tags as $tag) {
+            $this->pages = array_filter($this->pages, function($item) use ($tag) {
+                $tagsPage = $item->getTags();
+                $idTagsPage = array_keys($tagsPage);
+                return in_array($tag, $idTagsPage);
+            });
+        }
         return $this;
     }
 
@@ -33,8 +46,6 @@ class PagesManager implements IteratorAggregate {
         foreach ($this->pages as $page) {
             $tags = array_merge($tags, $page->getTags());
         }
-        // var_dump($tags);
-        // die();
         return $tags;
     }
 
@@ -47,7 +58,7 @@ class PagesManager implements IteratorAggregate {
     }
 
     private function readPages() {
-        if (empty($this->pages)) {
+        if (!$this->pageReaded) {
             $files = new RegexIterator(
                     new RecursiveIteratorIterator(
                     new RecursiveDirectoryIterator($this->path)
@@ -57,7 +68,9 @@ class PagesManager implements IteratorAggregate {
             foreach ($files as $path) {
                 $this->pages[] = new Page($path[0]);
             }
+            $this->pageReaded = true;
         }
+        return $this;
     }
 
 }

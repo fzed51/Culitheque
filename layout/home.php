@@ -3,19 +3,19 @@ if (!isset($_SESSION['filtre'])) {
     $_SESSION['filtre'] = [];
 }
 if (isset($_GET['f'])) {
-    $_SESSION['filtre'][] = strtoupper($_GET['f']);
+    $_SESSION['filtre'][strtoupper($_GET['f'])] = true;
 }
 if (isset($_GET['af'])) {
     if ($_GET['af'] !== 'ALL') {
-        if (isset($_SESSION['filtre'][$_GET['af']])) {
-            unset($_SESSION['filtre'][$_GET['af']]);
+        if (isset($_SESSION['filtre'][strtoupper($_GET['af'])])) {
+            unset($_SESSION['filtre'][strtoupper($_GET['af'])]);
         }
     } else {
         $_SESSION['filtre'] = [];
     }
 }
 
-$FILTRE = $_SESSION['filtre'];
+$FILTRE = array_keys($_SESSION['filtre']);
 
 $__layout = 'defaut';
 $page->addStyle('<link href="css/home.css" rel="stylesheet" type="text/css">');
